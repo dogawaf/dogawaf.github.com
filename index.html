@@ -2,8 +2,15 @@
 layout: default
 ---
 
+
 {% assign first_post = site.posts.first %}
 
 <h1><a href="{{ first_post.url }}">{{ first_post.title }}</a></h1>
 <p class="meta">{{ first_post.date | date:"%d/%m/%Y" }}</p>
+
 {{ first_post.content }}
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_trackPageview', '{{ first_post.url }}']);
+</script>
