@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{ site.title }}: {{ page.title }}</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="author" content="{{ site.author }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<link href="atom.xml" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
+
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/pygment_trac.css" type="text/css" media="screen, projection" />
+
+	<script type="text/javascript" src="/js/scale.fix.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1 class="header">dogawaf</h1>
+			<p>Un autre blog de développeur</p>
+		</header>
+
+		<section>
+			{{ content }}
+		</section>
+
+		<footer>
+			<p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+		</footer>
+	</div>
+	<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
