@@ -3,13 +3,6 @@ layout: default
 ---
 
 <h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }} - {{ page.tags }}</p>
+<p class="meta">{{ page.date | date:"%d/%m/%Y"}} - {{ page.tags | array_to_sentence_string}}</p>
 
 {{ content }}
-
-<h2>À lire aussi</h2>
-<ul class="posts">
-	{% for post in site.related_posts limit:5 %}
-		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>

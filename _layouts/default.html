@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>{{ site.title }}: {{ page.title }}</title>
+	<title>{{ page.title }} | {{ site.title }}</title>
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -18,13 +18,23 @@
 <body>
 	<div class="wrapper">
 		<header>
-			<h1 class="header">dogawaf</h1>
-			<p>Un autre blog de développeur</p>
+			<h1 class="header"><a href="/">Rémy DANIEL</a></h1>
+			<p>{{'développeur, [GAYA](http://www.gaya.fr)' | markdownify}}</p>
 		</header>
 
 		<section>
 			{{ content }}
+
+			<hr />
+			<h2>Tous les posts</h2>
+			<ul class="posts">
+			{% for post in site.posts %}
+				<li><span>{{ post.date | date:"%d/%m/%Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+			</ul>
 		</section>
+
+
 
 		<footer>
 			<p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>

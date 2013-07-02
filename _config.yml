@@ -1,5 +1,7 @@
-url: http://dogawaf.github.com/
+url: http://dogawaf.github.io/
+title: Rémy Daniel
 author: Rémy Daniel
 email: dogawaf@no-log.org
-title: Site de Rémy Daniel
 timezone: Europe/Paris
+permalink: /:categories/:title.html
+markdown: redcarpet
