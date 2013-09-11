@@ -31,4 +31,8 @@ Dans l'Extension manager, ouvrir la page de configuration de l'extension rtehtml
 
 pageTSConfig
 userTSConfig
+<<<<<<< HEAD
 feuille de style rte.css
+=======
+feuille de style rte.css
+>>>>>>> Draft Configurer le RTE de TYPO3
