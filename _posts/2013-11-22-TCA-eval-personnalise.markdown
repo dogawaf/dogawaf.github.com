@@ -13,20 +13,16 @@ Mais il est aussi possible d'en créer des personnalisées, comme le suggère la
 
 Déclarer le nouveau validateur dans le ext_localconf.php d'une extension.
 
-*EXT:my_ext/ext_localconf.php*
-
 ```php
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals']['tx_myext_validation_tce_coordinate'] = 'EXT:site_sites/class.tx_myext_validation_tce_coordinate.php';
 ```
 
 ## Implémentation de la classe
 
-Implémenter la classe qui s'occupera :
+Implémenter la classe qui s'occupera de :
 
- - de retourner le code JS utilisé dans la validation côté client,
- - et de valider la valeur avant son enregistrement.
-
-*EXT:my_ext/class.tx_myext_validation_tce_coordinate.php*
+ - retourner le code JS utilisé dans la validation côté client,
+ - valider la valeur avant son enregistrement.
 
 ```php
 class tx_myext_validation_tce_coordinate {
@@ -75,7 +71,6 @@ class tx_myext_validation_tce_coordinate {
 ```
 
 ## Utilisation
-
 
 Ensuite il est possible d'utiliser le nouveau validateur dans un eval du TCA.
 
